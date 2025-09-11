@@ -1,5 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise');
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Waiting for the Sunrise', cursive;
+    font-weight: bold;
+}
+h1 {
+    font-size: 48px;
+}
+h1, h2, h3, span {
+    color: black;
+    text-align: center;
+    line-height: 1.25;
+}
+html {
+    scroll-behavior: smooth;
+}
+p {
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+li {
+    list-style-type: none;
+}
+
+
 .about {
-    background-color: lightgray;
+
     padding: 20px;
     border-radius: 5px;
+}
+.home__info--container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 540px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.name-blue {
+    color: royalblue;
+}
+.dark .home__info--container {
+    color: white;
+}
+.dark .home_info-title {
+    color: white;
+}
+
+.home__img--mask {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0);
+    margin: auto;
+    animation: animate-profile-picture 800ms 200ms backwards;
+}
+
+@keyframes animate-profile-picture {
+
+    0% {
+        transform: scale(0);
+    }
+    80% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.home_info-title {
+    margin-bottom: 10px;
+    animation: fade-up 650ms 400ms backwards;
+    text-align: center;
+    margin-top: 20px
+}
+
+
+.home__para {
+    font-size:25px;
+    margin-bottom: 30px;
+    animation: fade-up 650ms 600ms backwards;
+}
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes animate-wave {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+    
+}
+
+.wave {
+    display: inline-block;
+    animation: animate-wave 500ms infinite ease;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1ch;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
 }

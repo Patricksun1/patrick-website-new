@@ -18,9 +18,9 @@ const Navbar = ({ theme, setTheme }) => {
       />
       <ul>
         <li><img src="" alt="" /><a href="" className = 'link__hover-effect'>Home</a></li>
-        <li><img src="" alt="" /><a href="" className = 'link__hover-effect'>About</a></li>
-        <li><img src="" alt="" /><a href="" className = 'link__hover-effect'>Features</a></li>
-        <li><img src="" alt="" /><a href="" className = 'link__hover-effect'>Projects</a></li>
+        <li><img src="" alt="" /><a href="" className = 'link__hover-effect'>Experience</a></li>
+        <li><img src="" alt="" /><a href="" className = 'link__hover-effect'>Visions</a></li>
+        <li><img src="" alt="" /><a href="" className = 'link__hover-effect'>Contact</a></li>
       </ul>
       <img
         src={theme == "light" ? toggle_light: toggle_dark}
