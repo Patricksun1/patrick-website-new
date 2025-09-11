@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar/Navbar'
 import About from './About/About'
+import Contact from './Contact/Contact'
+import Experience from './Experience/Experience'
+import Visions from './Visions/Visions'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 const App = () => {
   const current_theme = localStorage.getItem('current_theme')
@@ -11,7 +16,13 @@ const App = () => {
   return (
     <div className = {`container ${theme}`}>
       <Navbar theme = {theme} setTheme = {setTheme}/>
-      <About />
+      <Routes>
+        <Route path="/" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/experience" element={<Experience />} />
+        <Route path="/visions" element={<Visions />} />
+      </Routes>
+ 
     </div>
   )
 }

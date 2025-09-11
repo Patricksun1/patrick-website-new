@@ -2,9 +2,10 @@ import React from "react";
 import "./About.css";
 import home_image from "../assets/home_image.png";
 import TypingHeader from "./TypingHeader";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
-
+    const navigate = useNavigate();
 
   return (
     <div className="about">
@@ -23,9 +24,9 @@ const About = () => {
 
       </div>
       <div className="info-buttons">
-        <a href="#experience" className="btn btn--experience">Experience</a>
-        <a href="#visions" className="btn btn--visions">Visions</a>
-        <a href="#contact" className="btn btn--contact">Contact</a>
+        <a href="" className="btn btn--experience" onClick={() => navigate("/experience")}>Experience</a>
+        <a href="" className="btn btn--visions" onClick={() => navigate("/visions")}>Visions</a>
+        <a href="" className="btn btn--contact" onClick={() => navigate("/contact")}>Contact</a>
       </div>
     </div>
   );

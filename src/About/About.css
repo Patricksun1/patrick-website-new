@@ -155,5 +155,12 @@ li {
 
 .dark .btn {
     border: 2px solid white;
+    background-color: #222;
     color: white;
+}
+
+.dark .btn:hover {
+    background-color: #7f8cff7c; /* potentially change colour */
+    color: white;
+    transform: scale(1.1);
 }
