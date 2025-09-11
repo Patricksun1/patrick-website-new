@@ -5,7 +5,12 @@ import logo_dark from "../assets/patrick-logo-white.png";
 import toggle_light from "../assets/night.png";
 import toggle_dark from "../assets/day.png";
 
-const Navbar = ({ theme, setTheme }) => {
+interface NavbarProps {
+  theme: string;
+  setTheme: (theme: string) => void;
+}
+
+const Navbar = ({ theme, setTheme }: NavbarProps) => {
   const toggle_mode = () => {
     theme == "light" ? setTheme("dark") : setTheme("light");
   };

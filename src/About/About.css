@@ -40,11 +40,12 @@ li {
     max-width: 540px;
     margin: 0 auto;
     text-align: center;
+    padding-top: 40px
 
 }
 
 .name-blue {
-    color: royalblue;
+    color: #7f8cff;
 }
 .dark .home__info--container {
     color: white;
@@ -128,4 +129,31 @@ li {
   to {
     visibility: hidden;
   }
+}
+
+.info-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 300ms, color 300ms, transform 200ms;
+}
+.btn:hover {
+    background-color: #7f8cff;
+    color: white;
+    transform: scale(1.1);
+}
+
+.dark .btn {
+    border: 2px solid white;
+    color: white;
 }

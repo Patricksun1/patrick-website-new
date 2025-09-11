@@ -31,7 +31,7 @@ const TypingHeader: React.FC<MultiTypingHeaderProps> = ({
   const typed = currentPhrase.slice(0, charIndex);
 
   useEffect(() => {
-    let timer: NodeJS.Timeout;
+    let timer: ReturnType<typeof setTimeout>;
 
     if (!isDeleting && charIndex < currentPhrase.length) {
       timer = setTimeout(() => setCharIndex(charIndex + 1), speed);

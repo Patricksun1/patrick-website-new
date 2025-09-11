@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #ffffff;
+    background: #7f8cff;
     padding: 15px 7%;
 }
 
@@ -20,7 +20,7 @@ ul {
 ul li {
     display: inline-block;
     margin: 10px 20px; 
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
 
 }
