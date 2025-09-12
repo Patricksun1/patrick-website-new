@@ -1,4 +1,3 @@
-import React from "react";
 import "./About.css";
 import home_image from "../assets/home_image.png";
 import TypingHeader from "./TypingHeader";

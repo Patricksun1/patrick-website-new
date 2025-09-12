@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from './Navbar/Navbar'
 import About from './About/About'
 import Contact from './Contact/Contact'
 import Experience from './Experience/Experience'
 import Visions from './Visions/Visions'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 
 const App = () => {

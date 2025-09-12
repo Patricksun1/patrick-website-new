@@ -1,4 +1,3 @@
-import React from "react";
 import "./Navbar.css";
 import logo_light from "../assets/patrick-logo-black.png";
 import logo_dark from "../assets/patrick-logo-white.png";
