@@ -1,5 +1,7 @@
 import "./Experience.css";
 import Slideshow from "../Slideshow/Slideshow";
+import socials25_img from "../assets/socials25.png";
+import socials24_img from "../assets/socials24.png";
 
 const Experience = () => {
   return (
@@ -35,6 +37,9 @@ const Experience = () => {
             Check slideshow above for some of the events that we organised! 
             (we hope to see you at future iterations of these events)
           </p>
+          <div className="socials25-img">
+            <img src={socials25_img} alt="" />
+          </div>
           <h2 style={{ fontFamily: "Arial, sans-serif" }}>
             Socials Subcommittee 2024
           </h2>
@@ -46,6 +51,9 @@ const Experience = () => {
             also a great opportunity for me to develop my teamwork and communication skills 
             as we worked together to plan events that catered for so many people.
           </p>
+          <div className="socials25-img">
+            <img src={socials24_img} alt="" />
+          </div>
         </div>
       </div>
     </div>

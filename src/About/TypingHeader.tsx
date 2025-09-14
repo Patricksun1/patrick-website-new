@@ -47,7 +47,7 @@ const TypingHeader: React.FC<MultiTypingHeaderProps> = ({
     return () => clearTimeout(timer);
   }, [charIndex, isDeleting, currentPhrase, speed, deleteSpeed, pause, phrases.length]);
 
-  // ✅ Highlight "Patrick Sun" as soon as those characters appear
+
   const name = "Patrick Sun";
   const nameStart = currentPhrase.indexOf(name);
   let content;
@@ -65,7 +65,7 @@ const TypingHeader: React.FC<MultiTypingHeaderProps> = ({
       </>
     );
   } else {
-    content = typed; // no Patrick Sun in this phrase
+    content = typed; 
   }
 
   return (

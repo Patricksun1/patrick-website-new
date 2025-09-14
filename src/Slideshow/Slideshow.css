@@ -1,6 +1,6 @@
 .slideshow {
-  width: 600px;       /* fixed width */
-  height: 400px;      /* fixed height */
+  width: 45vw;       
+  height: 50vh;      
   overflow: hidden;
   border-radius: 10px;
   position: relative;
