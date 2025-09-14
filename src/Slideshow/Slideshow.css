@@ -4,24 +4,24 @@
   overflow: hidden;
   border-radius: 10px;
   position: relative;
+  margin: 0 auto;  
 }
 
-/* Images */
+
 .slideshow img {
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* fill box, crop excess */
+  object-fit: cover;  
   display: block;
   flex-shrink: 0
 }
 .slideshow-track {
   display: flex;
-  transition: transform 0.5s ease-in-out; /* smooth sliding */
+  transition: transform 0.8s ease-in-out; 
   width: 100%;
   height: 100%;
 }
 
-/* Dots / controls */
 .controls {
   position: absolute;
   bottom: 10px;
@@ -36,16 +36,16 @@
   height: 12px;
   border-radius: 50%;
   border: none;
-  background: rgba(255, 255, 255, 0.3); /* transparent dot for inactive */
+  background: rgba(255, 255, 255, 0.3); 
   cursor: pointer;
   padding: 0;
+  transition: background 0.3s ease-in-out;
 }
 
 .controls button.active {
-  background: white; /* highlight active dot */
+  background: white; 
 }
 
-/* Arrows */
 .arrow {
   position: absolute;
   top: 50%;
@@ -59,13 +59,13 @@
   cursor: pointer;
   font-size: 24px;
 
-  display: flex;           /* flex container for centering icon */
-  align-items: center;     /* vertical center */
-  justify-content: center; /* horizontal center */
+  display: flex;          
+  align-items: center;     
+  justify-content: center;
 
-  line-height: 1;          /* fixes vertical misalignment for characters */
-  padding: 0;              /* remove extra padding */
-  text-align: center;      /* horizontal alignment fallback */
+  line-height: 1;          
+  padding: 0;      
+  text-align: center;      
 
   opacity: 0;
   transition: opacity 0.3s ease, background 0.3s ease;
@@ -74,11 +74,11 @@
 
 .slideshow:hover .arrow {
   opacity: 1;
-  background: rgba(0, 0, 0, 0.6); /* darker semi-transparent circle on hover */
+  background: rgba(0, 0, 0, 0.6); 
 }
 
 .arrow:hover {
-  background: rgba(0, 0, 0, 0.8); /* fully visible circle on hover */
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .left-arrow {
@@ -91,3 +91,34 @@
   left: auto;
   right: 10px;
 }
+
+.slide-text h2.fade {
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-text {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #000; 
+}
+
+.slide-text h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.slide-text p {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+

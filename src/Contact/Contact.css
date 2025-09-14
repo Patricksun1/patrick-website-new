@@ -4,7 +4,7 @@
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center; /* centers content horizontally */
+  align-items: center; 
 }
 
 .contact h1 {
@@ -84,13 +84,13 @@
     color: white;
 }
 
-/* Button colors */
+
 .social-button.facebook { background-color: #3b5998; color: white; }
 .social-button.instagram { background-color: #e4405f; color: white; }
 .social-button.linkedin { background-color: #0077b5; color: white; }
 .social-button.email { background-color: #f39c12; color: white; }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .contact-content {
     flex-direction: column; 

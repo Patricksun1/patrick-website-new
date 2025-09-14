@@ -8,14 +8,14 @@ import wingsforlife_img from "../assets/wingsforlife.png";
 import outduction_img from "../assets/outduction.png";
 import bouldering_img from "../assets/bouldering.png";
 
-const images = [
-  peermentoring_img,
-  mahjong_img,
-  iceskating_img,
-  bouldering_img,
-  outduction_img,
-  wingsforlife_img,
-  brushes_img,
+const slides = [
+  { image: peermentoring_img, title: "Peer Mentoring 2025" },
+  { image: mahjong_img, title: "Mahjong Night" },
+  { image: iceskating_img, title: "Ice Skating" },
+  { image: bouldering_img, title: "Bouldering" },
+  { image: outduction_img, title: "Peer Mentoring Outduction" },
+  { image: wingsforlife_img, title: "Wings for Life" },
+  { image: brushes_img, title: "Brushes and Blizzards" },
 ];
 
 const Slideshow: React.FC = () => {
@@ -24,8 +24,8 @@ const Slideshow: React.FC = () => {
 
   const startAutoSlide = () => {
     if (intervalRef.current) clearInterval(intervalRef.current);
-    intervalRef.current = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length);
+    intervalRef.current = window.setInterval(() => {
+      setIndex(prev => (prev + 1) % slides.length);
     }, 4000);
   };
 
@@ -38,55 +38,63 @@ const Slideshow: React.FC = () => {
 
   const goToSlide = (i: number) => {
     setIndex(i);
-    startAutoSlide(); // reset timer
+    startAutoSlide();
   };
 
   const prevSlide = () => {
-    setIndex((prev) => (prev - 1 + images.length) % images.length);
-    startAutoSlide(); // reset timer
+    setIndex(prev => (prev - 1 + slides.length) % slides.length);
+    startAutoSlide();
   };
 
   const nextSlide = () => {
-    setIndex((prev) => (prev + 1) % images.length);
-    startAutoSlide(); // reset timer
+    setIndex(prev => (prev + 1) % slides.length);
+    startAutoSlide();
   };
 
   return (
-    <div className="slideshow">
-      <div
-        className="slideshow-track"
-        style={{ transform: `translateX(-${index * 100}%)` }}
-      >
-        {images.map((src, i) => (
-          <img key={i} src={src} alt={`Slide ${i}`} className="slideshow-image" />
-        ))}
+    <div className="slideshow-wrapper">
+     
+      <div className="slideshow">
+        <div
+          className="slideshow-track"
+          style={{ transform: `translateX(-${index * 100}%)` }}
+        >
+          {slides.map((slide, i) => (
+            <img
+              key={i}
+              src={slide.image}
+              alt={slide.title}
+              className="slideshow-image"
+            />
+          ))}
+        </div>
+
+        
+        <button className="arrow left-arrow" onClick={prevSlide}>
+          &#10094;
+        </button>
+        <button className="arrow right-arrow" onClick={nextSlide}>
+          &#10095;
+        </button>
+
+      
+        <div className="controls">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              className={i === index ? "active" : ""}
+              onClick={() => goToSlide(i)}
+            />
+          ))}
+        </div>
       </div>
 
-      {/* Arrows */}
-      <button className="arrow left-arrow" onClick={prevSlide}>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="white">
-          <path d="M10 2 L4 8 L10 14" stroke="white" strokeWidth="2" fill="none"/>
-        </svg>
-      </button>
-      <button className="arrow right-arrow" onClick={nextSlide}>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path d="M6 2 L12 8 L6 14" stroke="white" strokeWidth="2" />
-        </svg>
-      </button>
-
-      {/* Dots */}
-      <div className="controls">
-        {images.map((_, i) => (
-          <button
-            key={i}
-            className={i === index ? "active" : ""}
-            onClick={() => goToSlide(i)}
-          />
-        ))}
+      
+      <div className="slide-text">
+        <h2 key={index} className="fade">{slides[index].title}</h2>
       </div>
     </div>
   );
 };
 
 export default Slideshow;
-
