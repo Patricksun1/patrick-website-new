@@ -1,5 +1,5 @@
 import "./Contact.css";
-import contact_img from "../assets/contact_image.png";
+import contact_img from "../assets/contact_image.webp";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
