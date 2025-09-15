@@ -33,7 +33,8 @@
 .vision-text h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
- 
+    text-decoration: underline;
+    text-decoration-style: double;
     margin-bottom: 20px;
     text-align: center;
 
@@ -57,7 +58,7 @@
 .vision-text h3 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
- 
+    
     margin-bottom: 20px;
     text-align: center;
 
@@ -69,4 +70,81 @@
 
 .dark .vision-text h3 {
     color: white;
+}
+
+/* ---------------- iPhone / Small Devices ---------------- */
+@media (max-width: 768px) {
+    /* Container still flex column */
+    .visions-container {
+        flex-direction: column;
+        align-items: center; /* keep everything centered visually */
+        width: 100%;
+    }
+
+    /* Image scales down */
+    .vision-image-mask {
+        width: 90vw !important;   /* force smaller width */
+        max-width: 400px;         /* optional: limit on larger phones */
+        height: auto !important;  /* maintain aspect ratio */
+    }
+
+    .vision-image-mask img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* Text block scales */
+    .vision-text {
+        width: 90vw !important;  /* force smaller width */
+        max-width: 400px;        /* optional */
+        padding: 15px;
+        margin: 0 auto;
+        text-align: left;        /* keep bullets left-aligned */
+        box-sizing: border-box;
+    }
+
+    /* Headings smaller on mobile */
+    .vision-text h2,
+    .vision-text h3 {
+        font-size: 1.2rem;
+    }
+
+    /* List items smaller */
+    .vision-text li {
+        font-size: 0.95rem;
+    }
+
+    /* Reduce list indentation */
+    .vision-text ul {
+        padding-left: 1rem;
+    }
+}
+
+/* Very small iPhones (e.g., iPhone SE) */
+@media (max-width: 480px) {
+    .vision-image-mask {
+        width: 95vw !important;
+        max-width: 320px;
+        height: auto !important;
+    }
+
+    .vision-text {
+        width: 95vw !important;
+        max-width: 320px;
+        padding: 12px;
+    }
+
+    .vision-text h2,
+    .vision-text h3 {
+        font-size: 1rem;
+    }
+
+    .vision-text li {
+        font-size: 0.9rem;
+    }
+
+    .vision-text ul {
+        padding-left: 0.8rem;
+    }
 }

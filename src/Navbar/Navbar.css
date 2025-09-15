@@ -1,3 +1,4 @@
+/* ---------------- Desktop Navbar ---------------- */
 .navbar {
     width: 100%;
     display: flex;
@@ -12,69 +13,153 @@
     cursor: pointer;
 }
 
-ul {
+/* Nav links (desktop) */
+ul.nav-links {
     flex: 1;
     list-style: none;
     text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
 }
-ul li {
+
+ul.nav-links li {
     display: inline-block;
-    margin: 10px 20px; 
+    margin: 10px 20px;
     font-size: 20px;
     cursor: pointer;
-
 }
-.link__hover-effect::before {
+
+/* Hover underline */
+ul.nav-links li a.link__hover-effect {
+    position: relative;
+    display: inline-block; 
+    text-decoration: none;
+    color: inherit;
+}
+
+ul.nav-links li a.link__hover-effect::before {
     content: '';
-    position:absolute;
-    top: 100%;
+    position: absolute;
+    bottom: -4px;
     left: 0;
     width: 0;
     height: 3px;
     background: black;
-    transition: 500ms;
+    transition: width 0.5s ease;
 }
 
-.link__hover-effect:hover:before {
+ul.nav-links li a.link__hover-effect:hover::before {
     width: 100%;
-    color: black;
 }
 
+/* Dark mode */
+.dark .navbar {
+    background: #000;
+}
 
+.dark ul.nav-links li a.link__hover-effect::before {
+    background: white;
+}
 
+/* Theme toggle icon */
 .toggle-icon {
     width: 50px;
     cursor: pointer;
     margin-left: 40px;
 }
 
-
-
-.dark .navbar {
-    background: #000;
+/* ---------------- Hamburger Menu ---------------- */
+.hamburger {
+    display: none; /* hidden on desktop */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 20;
+    position: relative;
 }
 
-.dark .navbar a {
-    color: white;
-}
-
-.dark .navbar a {
-    color: white;
-}
-
-
-.dark .link__hover-effect::before {
-    content: '';
-    position:absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: white;
-    transition: 500ms;
-}
-
-.dark .link__hover-effect:hover:before {
+.hamburger span {
+    display: block;
+    height: 4px;
     width: 100%;
-    color: white;
+    background: black;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.dark .hamburger span {
+    background: white;
+}
+
+/* Hamburger open -> normal cross */
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 9px;
+    position: absolute;
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 9px;
+    position: absolute;
+}
+
+/* ---------------- Mobile Styles ---------------- */
+@media (max-width: 768px) {
+    /* Show hamburger */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Slide-out mobile menu (partial screen) */
+    ul.nav-links {
+        position: fixed;
+        top: 0;
+        right: -60%;      /* hidden offscreen */
+        width: 60%;       /* only 60% of screen */
+        height: 100vh;
+        flex-direction: column;
+        background: white;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 0;
+        margin: 0;
+        transition: right 0.3s ease;
+        z-index: 10;
+        overflow-x: hidden;
+    }
+
+    .dark ul.nav-links {
+        background: #000;
+    }
+
+    ul.nav-links.active {
+        right: 0; /* slide in partially */
+    }
+
+    ul.nav-links li {
+        display: block;
+        margin: 20px 0;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    ul.nav-links li a.link__hover-effect {
+        display: inline-block;
+        color: black;
+        font-size: 24px;
+    }
+
+    .dark ul.nav-links li a.link__hover-effect {
+        color: white;
+    }
 }

@@ -1,9 +1,11 @@
 .experience {
-    padding: 20px;
+  padding: 20px;
 }
-.dark h1{
-    color: white
+
+.dark h1 {
+  color: white;
 }
+
 .experience-container {
   display: flex;
   flex-direction: column;
@@ -13,18 +15,20 @@
 }
 
 .experience-text {
-    padding: 20px;
-    width: 60vw;
+  padding: 20px;
+  width: 60vw;
+  max-width: 900px;
 }
 
+/* Card containers */
 .socials-25-container,
 .socials-24-container {
   border-style: solid;
   border-color: black;
   border-radius: 20px;
   margin: 20px;
-  padding: 20px;  
-  box-sizing: border-box; 
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .dark .socials-25-container,
@@ -32,41 +36,93 @@
   border-color: white;
 }
 
-.dark .experience-description {
-    color: white;
-}
-
-
 .experience-description {
-  margin: 10px 0; 
+  margin: 10px 0;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
-  line-height: 1.6; 
+  line-height: 1.6;
 }
 
-
 .dark .experience-description {
-    color: white;
+  color: white;
 }
 
 .dark h2 {
-    color: white;
+  color: white;
 }
 
+/* Image wrapper */
 .socials25-img {
   display: flex;
-  justify-content: center; 
-  align-items: center;     
+  justify-content: center;
+  align-items: center;
   width: 25vw;
-  height: 35vh;
+  max-width: 100%;
   overflow: hidden;
   margin: 0 auto;
   padding: 20px;
+  border-radius: 20px; /* ensures clipping inside rounded box */
 }
 
 .socials25-img img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  border-radius: 20px;
+  height: auto;        /* keep aspect ratio */
+  object-fit: cover;
+  border-radius: 20px; /* match container radius */
+  display: block;      /* removes stray inline spacing */
+}
+
+/* ---------------- RESPONSIVE BREAKPOINTS ---------------- */
+@media (max-width: 1024px) {
+  .experience-text {
+    width: 80vw;
+  }
+
+  .socials25-img {
+    width: 50vw;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-text {
+    width: 90vw;
+    padding: 15px;
+  }
+
+  .socials25-img {
+    width: 70vw;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .experience-text {
+    width: 95vw;
+    padding: 10px;
+  }
+
+  .socials-25-container,
+  .socials-24-container {
+    margin: 10px 0;
+    padding: 15px;
+  }
+
+  .socials25-img {
+    width: 95vw;
+    padding: 5px;
+  }
 }

@@ -165,3 +165,69 @@ li {
     color: white;
     transform: scale(1.1);
 }
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  .home__para {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 20px;
+    padding: 8px 16px;
+  }
+
+  .home__img--mask {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* iPhones / small devices */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2, h3, span {
+    font-size: 20px;
+  }
+
+  .home__para {
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+
+  .btn {
+    font-size: 18px;
+    padding: 8px 14px;
+  }
+
+  .info-buttons {
+    flex-direction: column; /* stack buttons on small screens */
+    gap: 15px;
+  }
+
+}
+
+/* Very small phones (iPhone SE, older models) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .home__para {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+ 
+}
