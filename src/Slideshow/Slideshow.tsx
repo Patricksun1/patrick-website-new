@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import './Slideshow.css';
-import mahjong_img from "../assets/Mahjong_night.png";
-import brushes_img from "../assets/Brushes_blizzards.png";
-import iceskating_img from "../assets/ice_skating.png";
-import peermentoring_img from "../assets/peer_mentoring.png";
-import wingsforlife_img from "../assets/wingsforlife.png";
-import outduction_img from "../assets/outduction.png";
+import mahjong_img from "../assets/Mahjong_night.webp";
+import brushes_img from "../assets/Brushes_blizzards.webp";
+import iceskating_img from "../assets/ice_skating.webp";
+import peermentoring_img from "../assets/peer_mentoring.webp";
+import wingsforlife_img from "../assets/wingsforlife.webp";
+import outduction_img from "../assets/outduction.webp";
 import bouldering_img from "../assets/bouldering.webp";
 
 const slides = [
