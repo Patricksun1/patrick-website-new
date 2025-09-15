@@ -6,7 +6,7 @@ import iceskating_img from "../assets/ice_skating.png";
 import peermentoring_img from "../assets/peer_mentoring.png";
 import wingsforlife_img from "../assets/wingsforlife.png";
 import outduction_img from "../assets/outduction.png";
-import bouldering_img from "../assets/bouldering.png";
+import bouldering_img from "../assets/bouldering.webp";
 
 const slides = [
   { image: peermentoring_img, title: "Peer Mentoring 2025" },
