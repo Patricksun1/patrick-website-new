@@ -59,6 +59,9 @@ ul.nav-links li a.link__hover-effect:hover::before {
     background: #000;
 }
 
+.dark ul.nav-links li a.link__hover-effect {
+    color: white;
+}
 .dark ul.nav-links li a.link__hover-effect::before {
     background: white;
 }
