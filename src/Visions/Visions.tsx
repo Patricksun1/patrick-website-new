@@ -1,5 +1,5 @@
 import "./Visions.css";
-import visions from "../assets/visions.png";
+import visions from "../assets/visions.webp";
 const Visions = () => {
   return (
     <div className="visions" id="visions">

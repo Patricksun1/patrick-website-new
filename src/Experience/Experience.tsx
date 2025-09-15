@@ -1,7 +1,7 @@
 import "./Experience.css";
 import Slideshow from "../Slideshow/Slideshow";
-import socials25_img from "../assets/socials25.png";
-import socials24_img from "../assets/socials24.png";
+import socials25_img from "../assets/socials25.webp";
+import socials24_img from "../assets/socials24.webp";
 
 const Experience = () => {
   return (
