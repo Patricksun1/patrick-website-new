@@ -16,7 +16,7 @@ const Visions = () => {
             individuals are welcome to attend, whether they come by themselves
             or with a group of friends.
           </h3>
-          <h2>Inclusivity and Diversity</h2>
+          <h2>🌟 Inclusivity and Diversity 🌟</h2>
           <ul>
             <li>
               I will continue to ensure that our events are inclusive and
@@ -34,7 +34,7 @@ const Visions = () => {
             </li>
           </ul>
 
-          <h2>Community Engagement</h2>
+          <h2>🏡 Community Engagement 🏡 </h2>
           <ul>
             <li>
               Targetting community cohesion (allowing for more Women In STEM,
@@ -54,7 +54,7 @@ const Visions = () => {
             </li>
           </ul>
 
-          <h2>Professional Development</h2>
+          <h2>👔 Professional Development 👔</h2>
           <ul>
             <li>
               Providing more resources and support for students to develop their
@@ -74,7 +74,7 @@ const Visions = () => {
             </li>
           </ul>
 
-          <h2>Financial Management</h2>
+          <h2>🏦 Financial Management 🏦</h2>
           <ul>
             <li>
               My personal interest in personal finance has driven me to seek out
