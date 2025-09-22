@@ -21,6 +21,7 @@ const slides = [
 const Slideshow: React.FC = () => {
   const [index, setIndex] = useState(0);
   const intervalRef = useRef<number | null>(null);
+  const touchStartX = useRef<number | null>(null);
 
   const startAutoSlide = () => {
     if (intervalRef.current) clearInterval(intervalRef.current);
@@ -51,10 +52,33 @@ const Slideshow: React.FC = () => {
     startAutoSlide();
   };
 
+  // Handle touch events
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX.current - touchEndX;
+
+    if (Math.abs(diff) > 50) { 
+      if (diff > 0) {
+        nextSlide(); // swipe left → next
+      } else {
+        prevSlide(); // swipe right → previous
+      }
+    }
+    touchStartX.current = null;
+  };
+
   return (
     <div className="slideshow-wrapper">
-     
-      <div className="slideshow">
+      <div 
+        className="slideshow"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
         <div
           className="slideshow-track"
           style={{ transform: `translateX(-${index * 100}%)` }}
@@ -69,7 +93,7 @@ const Slideshow: React.FC = () => {
           ))}
         </div>
 
-        
+        {/* Navigation arrows */}
         <button className="arrow left-arrow" onClick={prevSlide}>
           &#10094;
         </button>
@@ -77,7 +101,7 @@ const Slideshow: React.FC = () => {
           &#10095;
         </button>
 
-      
+        {/* Dot controls */}
         <div className="controls">
           {slides.map((_, i) => (
             <button
@@ -89,7 +113,6 @@ const Slideshow: React.FC = () => {
         </div>
       </div>
 
-      
       <div className="slide-text">
         <h2 key={index} className="fade">{slides[index].title}</h2>
       </div>

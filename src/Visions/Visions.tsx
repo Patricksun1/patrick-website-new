@@ -24,7 +24,7 @@ const Visions = () => {
               EngSoc, IceSoc, MahjongSoc and more.{" "}
             </li>
             <li>
-              I will also ensure that our events incorporate feedback
+              Ensuring that our events incorporate feedback
               anonymously from attendees to improve future events.
             </li>
             <li>
