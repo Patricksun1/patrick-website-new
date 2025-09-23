@@ -27,6 +27,10 @@ const About = () => {
         <a href="" className="btn btn--visions" onClick={() => navigate("/visions")}>Visions</a>
         <a href="" className="btn btn--contact" onClick={() => navigate("/contact")}>Contact</a>
       </div>
+      <div className="toggle-hint">
+        <div className="arrow-up"></div>
+        <div className="hint-text">Try switching modes!</div>
+      </div>
     </div>
   );
 };
