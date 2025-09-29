@@ -167,97 +167,8 @@ li {
 }
 
 
-.arrow-up {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 12px solid #7f8cff; 
-  margin-bottom: 6px; 
-}
 
-
-.hint-text {
-  background: #7f8cff;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-
-.dark .arrow-up {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 12px solid black; 
-  margin-bottom: 6px; 
-}
-
-
-.dark .hint-text {
-  background: black;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-@keyframes fadePopThenOut {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px) scale(0.8);
-    filter: blur(6px);
-  }
-  20% {
-    opacity: 1;
-    transform: translateY(4px) scale(1.05);
-    filter: blur(0);
-  }
-  30% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-
-  40% {
-    transform: translateY(-3px) scale(1.01);
-  }
-  50% {
-    transform: translateY(2px) scale(0.99);
-  }
-  60% {
-    transform: translateY(-2px) scale(1.01);
-  }
-  70% {
-    transform: translateY(2px) scale(0.99);
-  }
-  80% {
-    transform: translateY(-1px) scale(1.0);
-  }
-
-  90% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-10px) scale(0.9);
-  }
-}
-
-.toggle-hint {
-  position: fixed;
-  top: 100px;
-  right: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: fadePopThenOut 10s cubic-bezier(0.25, 1.25, 0.5, 1) forwards;
-}
+/* ---------------- Mobile Responsiveness ---------------- */
 
 @media (max-width: 1024px) {
   h1 {
@@ -301,13 +212,12 @@ li {
   }
 
   .info-buttons {
-    flex-direction: column; /* stack buttons on small screens */
+    flex-direction: column; 
     gap: 15px;
   }
-
 }
 
-/* Very small phones (iPhone SE, older models) */
+
 @media (max-width: 480px) {
   h1 {
     font-size: 24px;
