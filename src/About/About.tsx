@@ -17,8 +17,7 @@ const About = () => {
           <span className="wave">👋</span>
         </h1>
         <p className="home__para">
-          I'm a Second Year Engineering/Computer Science Student @ UNSW running
-          for Co-Pres and Treasurer!
+          I'm a Third Year Mechanical Engineering/Computer Science Student @ UNSW!
         </p>
 
       </div>

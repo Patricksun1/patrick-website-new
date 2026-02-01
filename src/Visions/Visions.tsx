@@ -1,9 +1,16 @@
+import { Link } from "react-router-dom";
 import "./Visions.css";
 import visions from "../assets/visions.webp";
 const Visions = () => {
   return (
     <div className="visions" id="visions">
+      <div className="visions-header">
+        <Link to="/" className="back-arrow">
+          ← Back
+        </Link>
       <h1>Visions</h1>
+      </div>
+          
       <div className="visions-container">
         <div className="vision-image-mask">
           <img src={visions} alt="" />

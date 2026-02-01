@@ -75,9 +75,6 @@ const Navbar = ({ theme, setTheme }: NavbarProps) => {
       {/* Nav links */}
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         <li>
-          <a className="link__hover-effect" onClick={() => handleNavigate("/")}>Home</a>
-        </li>
-        <li>
           <a className="link__hover-effect" onClick={() => handleNavigate("/Experience")}>Experience</a>
         </li>
         <li>
