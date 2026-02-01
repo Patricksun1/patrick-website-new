@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Experience.css";
 import Slideshow from "../Slideshow/Slideshow";
 import socials25_img from "../assets/socials25.webp";
@@ -6,7 +7,13 @@ import socials24_img from "../assets/socials24.webp";
 const Experience = () => {
   return (
     <div className="experience" id="experience">
-      <h1>Experiences</h1>
+      <div className="experience-header">
+        <Link to="/" className="back-arrow">
+         ← Back
+        </Link>
+        <h1>Experiences</h1>
+      </div>
+
       <div className="experience-container">
         <div className="experience-items">
           <Slideshow />

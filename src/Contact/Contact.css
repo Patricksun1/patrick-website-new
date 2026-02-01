@@ -1,15 +1,35 @@
 .contact {
   width: 100%;
-  padding: 2rem;
   font-family: Arial, sans-serif;
-  display: flex;
   flex-direction: column;
   align-items: center; 
 }
 
-.contact h1 {
-  text-align: center;
-  margin-bottom: 2rem;
+
+.contact-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 2rem 7%;
+  
+}
+
+.contact-header h1 {
+  grid-column: 2;
+  justify-self: center;
+}
+
+.back-arrow {
+  grid-column: 1;
+  justify-self: start;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.back-arrow:hover {
+  transform: translateX(-4px);
+  opacity: 0.7;
 }
 
 .contact-content {
@@ -18,7 +38,8 @@
   gap: 10rem;               
   justify-content: center;  
   flex-wrap: wrap;          
-  max-width: 1200px;        
+  max-width: 1200px;   
+  margin: 0 auto;     
 }
 
 .contact-image-mask {
@@ -89,6 +110,7 @@
 .social-button.instagram { background-color: #e4405f; color: white; }
 .social-button.linkedin { background-color: #0077b5; color: white; }
 .social-button.email { background-color: #f39c12; color: white; }
+
 
 
 @media (max-width: 768px) {

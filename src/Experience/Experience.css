@@ -1,5 +1,6 @@
 .experience {
   padding: 20px;
+  position: relative;
 }
 
 .dark h1 {
@@ -125,4 +126,29 @@
     width: 95vw;
     padding: 5px;
   }
+}
+.experience-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 0px 7%;
+  
+}
+
+.experience-header h1 {
+  grid-column: 2;
+  justify-self: center;
+}
+
+.back-arrow {
+  grid-column: 1;
+  justify-self: start;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.back-arrow:hover {
+  transform: translateX(-4px);
+  opacity: 0.7;
 }

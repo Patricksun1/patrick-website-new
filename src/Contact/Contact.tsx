@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Contact.css";
 import contact_img from "../assets/contact_image.webp";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
@@ -5,8 +6,12 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaEnvelope } from "react-icons/
 const Contact = () => {
   return (
     <div className="contact">
-      <h1>Contact Me</h1>
-
+      <div className="contact-header">
+        <Link to="/" className="back-arrow">
+          ← Back
+          </Link>
+        <h1>Contact Me</h1>
+      </div>
       <div className="contact-content">
         <div className="contact-image-mask">
           <img src={contact_img} alt="Contact" />
