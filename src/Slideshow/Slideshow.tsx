@@ -7,6 +7,8 @@ import peermentoring_img from "../assets/peer_mentoring.webp";
 import wingsforlife_img from "../assets/wingsforlife.webp";
 import outduction_img from "../assets/outduction.webp";
 import bouldering_img from "../assets/bouldering.webp";
+import socials24_img from "../assets/socials24.webp"
+import socials25_img from "../assets/socials25.webp"
 
 const slides = [
   { image: peermentoring_img, title: "Peer Mentoring 2025" },
@@ -16,6 +18,8 @@ const slides = [
   { image: outduction_img, title: "Peer Mentoring Outduction" },
   { image: wingsforlife_img, title: "Wings for Life" },
   { image: brushes_img, title: "Brushes and Blizzards" },
+  { image: socials24_img, title: "Socials 24 Team" },
+  { image: socials25_img, title: "Socials 25 Team" }
 ];
 
 const Slideshow: React.FC = () => {
