@@ -1,9 +1,9 @@
-.visions {
+.projects {
     padding: 20px;
     text-align: left;
 }
 
-.visions-header {
+.projects-header {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -11,7 +11,7 @@
   
 }
 
-.visions-header h1 {
+.projects-header h1 {
   grid-column: 2;
   justify-self: center;
 }
@@ -29,14 +29,14 @@
   opacity: 0.7;
 }
 
-.visions-container {
+.projects-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.vision-image-mask {
+.projects-image-mask {
     display: flex;
     justify-content: center; /* horizontal center */
     align-items: center;     /* vertical center */
@@ -46,18 +46,18 @@
     margin: 0 auto;
 }
 
-.vision-image-mask img {
+.projects-image-mask img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* makes the image fill the box */
 }
 
-.vision-text {
+.projects-text {
     padding: 20px;
     width: 75vw;
     text-align: left;
 }
-.vision-text h2 {
+.projects-text h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: underline;
@@ -66,7 +66,7 @@
     text-align: center;
 }
 
-.vision-text ul {
+.projects-text ul {
 
   list-style-position: outside; 
   padding-left: 40px;      /* indentation so bullets aren’t cut off */
@@ -74,14 +74,14 @@
   text-align: left;
 }
 
-.vision-text li {
+.projects-text li {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     text-align: left;
     line-height: 1.5;
     display: list-item !important;
 }
-.vision-text h3 {
+.projects-text h3 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     
@@ -90,38 +90,38 @@
 
 }
 
-.dark .vision-text {
+.dark .projects-text {
     color: white;
 }
 
-.dark .vision-text h3 {
+.dark .projects-text h3 {
     color: white;
 }
 
 /* ---------------- iPhone / Small Devices ---------------- */
 @media (max-width: 768px) {
     /* Container still flex column */
-    .visions-container {
+    .projects-container {
         flex-direction: column;
         align-items: center; /* keep everything centered visually */
         width: 100%;
     }
 
     /* Image scales down */
-    .vision-image-mask {
+    .projects-image-mask {
         width: 90vw !important;   /* force smaller width */
         max-width: 400px;         /* optional: limit on larger phones */
         height: auto !important;  /* maintain aspect ratio */
     }
 
-    .vision-image-mask img {
+    .projects-image-mask img {
         width: 100%;
         height: auto;
         object-fit: cover;
     }
 
     /* Text block scales */
-    .vision-text {
+    .projects-text {
         width: 90vw !important;  /* force smaller width */
         max-width: 400px;        /* optional */
         padding: 15px;
@@ -131,46 +131,46 @@
     }
 
     /* Headings smaller on mobile */
-    .vision-text h2,
-    .vision-text h3 {
+    .projects-text h2,
+    .projects-text h3 {
         font-size: 1.2rem;
     }
 
     /* List items smaller */
-    .vision-text li {
+    .projects-text li {
         font-size: 0.95rem;
     }
 
     /* Reduce list indentation */
-    .vision-text ul {
+    .projects-text ul {
         padding-left: 1rem;
     }
 }
 
 /* Very small iPhones (e.g., iPhone SE) */
 @media (max-width: 480px) {
-    .vision-image-mask {
+    .projects-image-mask {
         width: 95vw !important;
         max-width: 320px;
         height: auto !important;
     }
 
-    .vision-text {
+    .projects-text {
         width: 95vw !important;
         max-width: 320px;
         padding: 12px;
     }
 
-    .vision-text h2,
-    .vision-text h3 {
+    .projects-text h2,
+    .projects-text h3 {
         font-size: 1rem;
     }
 
-    .vision-text li {
+    .projects-text li {
         font-size: 0.9rem;
     }
 
-    .vision-text ul {
+    .projects-text ul {
         padding-left: 0.8rem;
     }
 }

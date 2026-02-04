@@ -75,10 +75,10 @@ const Navbar = ({ theme, setTheme }: NavbarProps) => {
       {/* Nav links */}
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         <li>
-          <a className="link__hover-effect" onClick={() => handleNavigate("/Experience")}>Experience</a>
+          <a className="link__hover-effect" onClick={() => handleNavigate("/About-me")}>About Me</a>
         </li>
         <li>
-          <a className="link__hover-effect" onClick={() => handleNavigate("/Visions")}>Visions</a>
+          <a className="link__hover-effect" onClick={() => handleNavigate("/Projects")}>Projects</a>
         </li>
         <li>
           <a className="link__hover-effect" onClick={() => handleNavigate("/Contact")}>Contact</a>

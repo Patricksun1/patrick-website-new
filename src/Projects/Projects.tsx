@@ -1,21 +1,18 @@
 import { Link } from "react-router-dom";
-import "./Visions.css";
-import visions from "../assets/visions.webp";
-const Visions = () => {
+import "./Projects.css";
+
+const Projects = () => {
   return (
-    <div className="visions" id="visions">
-      <div className="visions-header">
+    <div className="projects" id="projects">
+      <div className="projects-header">
         <Link to="/" className="back-arrow">
           ← Back
         </Link>
-      <h1>Visions</h1>
+      <h1>Projects</h1>
       </div>
           
-      <div className="visions-container">
-        <div className="vision-image-mask">
-          <img src={visions} alt="" />
-        </div>
-        <div className="vision-text">
+      <div className="projects-container">
+        <div className="projects-text">
           <h3>
             {" "}
             As Socials Director, I have worked hard to ensure that our events
@@ -113,4 +110,4 @@ const Visions = () => {
   );
 };
 
-export default Visions;
+export default Projects;
