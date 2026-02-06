@@ -7,7 +7,7 @@ const About = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="about">
+    <div className="home">
       <div className="home__info--container">
         <figure className="home__img--mask">
           <img src={home_image} alt="picture of me" />
@@ -19,6 +19,7 @@ const About = () => {
         <p className="home__para">
           I'm a Third Year Mechanical Engineering/Computer Science Student @
           UNSW!
+          (This website is still WIP)
         </p>
       </div>
       <div className="info-buttons">
