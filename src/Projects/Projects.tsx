@@ -1,112 +1,72 @@
 import { Link } from "react-router-dom";
 import "./Projects.css";
+import keyword from "../assets/Keyword.png"
+import unemployed from "../assets/unemployed.png"
+import portfolio from "../assets/firstyearwebsite.png"
+import scriptimage from "../assets/peermentoringscript.png"
+const projects = [
+  {
+    title: "Keyword",
+    description: "A browser-based word game built during DevSoc Warden training.",
+    live: "https://warden-games.vercel.app/keyword",
+    github: "https://github.com/devsoc-unsw/trainee-warden-24t2",
+    image: keyword,
+  }, {
+    title: "unemployed.",
+    description: "A satirical job-search themed website with a backend component.",
+    live: "https://unemployed-delta.vercel.app/",
+    github: "https://github.com/makeen05/unemployed/tree/main/server",
+    image: unemployed,
+  },
+  {
+    title: "Personal Portfolio (Archived)",
+    description: "My first-year personal website, rebuilt into the current portfolio.",
+    live: "https://patricksun1.github.io/PatrickWebsite/",
+    github: "https://github.com/Patricksun1/PatrickWebsite",
+    image: portfolio,
+  },
+  {
+    title: "Group Sorting Script",
+    description:
+      "A custom sorting script created at CSESoc to automatically assign 340+ mentees into 30+ constrained groups.",
+    live: "https://script.google.com/d/1v2adzjPphvRmLSbWr5KltDCGRwpeZtEMaC8el6_P3bJ8VsLjqz3zXrCo/edit?usp=sharing",
+    image: scriptimage,
+  },
+];
 
 const Projects = () => {
   return (
-    <div className="projects" id="projects">
-      <div className="projects-header">
-        <Link to="/" className="back-arrow">
-          ← Back
-        </Link>
-      <h1>Projects</h1>
+    <section className="projects" id="projects">
+      <header className="projects-header">
+        <Link to="/" className="back-arrow">← Back</Link>
+        <h1>Projects</h1>
+      </header>
+
+      <div className="projects-grid">
+        {projects.map((project) => (
+          <div key={project.title} className="project-card">
+            <img className ="project-image" src = {project.image} alt="" />
+            <div className="project-content">
+              <h2>{project.title}</h2>
+              <p>{project.description}</p>
+
+              <div className="project-links">
+                {project.live && (
+                  <a href={project.live} target="_blank" rel="noreferrer">
+                    Link →
+                  </a>
+                )}
+                {project.github && (
+                  <a href={project.github} target="_blank" rel="noreferrer">
+                    GitHub →
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
-          
-      <div className="projects-container">
-        <div className="projects-text">
-          <h3>
-            {" "}
-            As Socials Director, I have worked hard to ensure that our events
-            cater towards a diverse range of students and ensure that all
-            individuals are welcome to attend, whether they come by themselves
-            or with a group of friends.
-          </h3>
-          <h2>🌟 Inclusivity and Diversity 🌟</h2>
-          <ul>
-            <li>
-              I will continue to ensure that our events are inclusive and
-              welcoming by collaborating with a variety of societies such as
-              EngSoc, IceSoc, MahjongSoc and more.{" "}
-            </li>
-            <li>
-              Ensuring that our events incorporate feedback
-              anonymously from attendees to improve future events.
-            </li>
-            <li>
-              I will also continue to ensure that our events are accessible to
-              all students by considering factors such as location, timing and
-              cost when planning events.
-            </li>
-          </ul>
-
-          <h2>🏡 Community Engagement 🏡 </h2>
-          <ul>
-            <li>
-              Targetting community cohesion (allowing for more Women In STEM,
-              international student, pride and postgrad events) by working
-              closely with other ports and societies.
-            </li>
-            <li>
-              Improving the internal structure of CSESoc by allowing for more
-              recurring events to occur (e.g. weekly board game nights,
-              fortnightly movie nights etc) that allow for more people to come
-              along and meet new people in a more relaxed environment.{" "}
-            </li>
-            <li>
-              Continuing to plan large flagship events that allow for the whole
-              of CSE to come together and celebrate being part of such a great
-              community!
-            </li>
-          </ul>
-
-          <h2>👔 Professional Development 👔</h2>
-          <ul>
-            <li>
-              Providing more resources and support for students to develop their
-              professional skills (e.g. resume workshops, interview preparation,
-              networking events) by collaborating with industry partners and
-              alumni.{" "}
-            </li>
-            <li>
-              Creating more opportunities for students to gain practical
-              experience (e.g. internships, work placements, industry projects)
-              by promoting available opportunities and facilitating connections
-              with employers.{" "}
-            </li>
-            <li>
-              Supporting students in their career aspirations by offering
-              mentorship programs and career guidance events.
-            </li>
-          </ul>
-
-          <h2>🏦 Financial Management 🏦</h2>
-          <ul>
-            <li>
-              My personal interest in personal finance has driven me to seek out
-              opportunities to learn more about budgeting, saving, and investing
-              which I can carry forward to help CSESoc manage its finances
-              effectively.
-            </li>
-            <li>
-              Ensure CSESoc maintains a healthy budget by carefully monitoring
-              income and expenses, seeking out cost-effective solutions, and
-              prioritizing spending on initiatives that provide the most value
-              to members.
-            </li>
-            <li>
-              Increase revenue streams by exploring new fundraising
-              opportunities, seeking out sponsorships, and promoting CSESoc
-              events and initiatives to a wider audience.
-            </li>
-            <li>
-              Ensure transparency and accountability in financial management by
-              providing regular updates to the executive team and members,
-              maintaining accurate records, and adhering to best practices in
-              financial management.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
 

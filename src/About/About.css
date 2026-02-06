@@ -163,6 +163,7 @@
 .about-header {
   position: relative;
   text-align: center;
+  padding: 20px;
 }
 
 .back-arrow {

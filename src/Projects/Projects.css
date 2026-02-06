@@ -1,14 +1,12 @@
 .projects {
-    padding: 20px;
-    text-align: left;
+  padding: 4rem 7%;
 }
 
 .projects-header {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  padding: 0px 7%;
-  
+  margin-bottom: 3rem;
 }
 
 .projects-header h1 {
@@ -17,160 +15,66 @@
 }
 
 .back-arrow {
-  grid-column: 1;
-  justify-self: start;
-  font-size: 1rem;
   text-decoration: none;
-  color: #000;
+  font-size: 0.95rem;
 }
 
-.back-arrow:hover {
-  transform: translateX(-4px);
-  opacity: 0.7;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
-.projects-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.project-card {
+  overflow: hidden;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  aspect-ratio: 4 / 5;
 }
 
-.projects-image-mask {
-    display: flex;
-    justify-content: center; /* horizontal center */
-    align-items: center;     /* vertical center */
-    width: 60vw;
-    height: 30vh;
-    overflow: hidden;
-    margin: 0 auto;
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: #2563eb;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
-.projects-image-mask img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* makes the image fill the box */
+.project-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
 }
 
-.projects-text {
-    padding: 20px;
-    width: 75vw;
-    text-align: left;
-}
-.projects-text h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-decoration: underline;
-    text-decoration-style: solid;
-    margin-bottom: 20px;
-    text-align: center;
+.project-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.85;
 }
 
-.projects-text ul {
-
-  list-style-position: outside; 
-  padding-left: 40px;      /* indentation so bullets aren’t cut off */
-  margin: 0 0 20px 0;      /* add space between lists */
-  text-align: left;
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.25rem;
 }
 
-.projects-text li {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    text-align: left;
-    line-height: 1.5;
-    display: list-item !important;
-}
-.projects-text h3 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    
-    margin-bottom: 20px;
-    text-align: center;
-
+.project-links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #2563eb;
 }
 
-.dark .projects-text {
-    color: white;
+.project-content {
+    flex: 1;
+    padding: 1.25rem;
+    background-color:khaki;
 }
 
-.dark .projects-text h3 {
-    color: white;
-}
-
-/* ---------------- iPhone / Small Devices ---------------- */
-@media (max-width: 768px) {
-    /* Container still flex column */
-    .projects-container {
-        flex-direction: column;
-        align-items: center; /* keep everything centered visually */
-        width: 100%;
-    }
-
-    /* Image scales down */
-    .projects-image-mask {
-        width: 90vw !important;   /* force smaller width */
-        max-width: 400px;         /* optional: limit on larger phones */
-        height: auto !important;  /* maintain aspect ratio */
-    }
-
-    .projects-image-mask img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-
-    /* Text block scales */
-    .projects-text {
-        width: 90vw !important;  /* force smaller width */
-        max-width: 400px;        /* optional */
-        padding: 15px;
-        margin: 0 auto;
-        text-align: left;        /* keep bullets left-aligned */
-        box-sizing: border-box;
-    }
-
-    /* Headings smaller on mobile */
-    .projects-text h2,
-    .projects-text h3 {
-        font-size: 1.2rem;
-    }
-
-    /* List items smaller */
-    .projects-text li {
-        font-size: 0.95rem;
-    }
-
-    /* Reduce list indentation */
-    .projects-text ul {
-        padding-left: 1rem;
-    }
-}
-
-/* Very small iPhones (e.g., iPhone SE) */
-@media (max-width: 480px) {
-    .projects-image-mask {
-        width: 95vw !important;
-        max-width: 320px;
-        height: auto !important;
-    }
-
-    .projects-text {
-        width: 95vw !important;
-        max-width: 320px;
-        padding: 12px;
-    }
-
-    .projects-text h2,
-    .projects-text h3 {
-        font-size: 1rem;
-    }
-
-    .projects-text li {
-        font-size: 0.9rem;
-    }
-
-    .projects-text ul {
-        padding-left: 0.8rem;
-    }
+.project-image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  max-height: 50%;
+  object-fit: cover;
 }
